@@ -13,5 +13,15 @@ if (age < 18) {
     price = (price - sconto)
     const newPrice = price.toFixed(2)
     console.log(newPrice)
-    console.log(`il prezzo scontato è $newPrice perchè sei minorenne`)
+    console.log(`il prezzo del biglietto scontato è ${newPrice}€ perchè sei minorenne`)
+}
+else if (age > 65) { //calcoliamo e applicahiamo lo sconto del 20% se il passeggero è over 65
+    sconto = (price * 40 / 100)
+    price = (price - sconto)
+    const newPrice = price.toFixed(2)
+    console.log(newPrice)
+    console.log(`il prezzo del biglietto scontato è ${newPrice}€ perchè sei over 65`)
+}
+else { //stampiamo il prezzo se il passeggero non ha agevolazioni
+    console.log(`il prezzo del biglietto è ${price}€`)  
 }
